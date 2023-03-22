@@ -56,7 +56,7 @@
 ### 12 - Execute o comando abaixo para certificar que os namespaces dos arquivos estão fidedignos:
     call composer dump-autoload
 
-### Nota: Para executar os comando call não é necessário entrar dentro do container com a flag exec, pois dentro do script do arquivo call, disponível na raiz do projeto, os comandos docker são executados com a flag run --rm, ou seja, o comando levatará o container caso não esteja up, e assim que usá-lo, o removerá.  
+### Nota: Para executar o comando call não é necessário entrar dentro do container com a flag exec, pois dentro do script do arquivo call, disponível na raiz do projeto, os comandos docker são executados com a flag run --rm, ou seja, o comando levatará o container caso não esteja up, e assim que usá-lo, o removerá.  
 
 
 
