@@ -10,8 +10,15 @@
  
  ### 2 - Acesse o diretório do projeto:
      cd docker-development
-     
-   
+ 
+ ### 3 - Execute o comando abaixo:
+     pwd
+ 
+ ### 4 - Copie a saída do comando pwd mostarado na tela:
+ Exemplo: /home/seu_usuario/caminho_do_projeto/docker-development
+ 
+ ### Acesse o arquivo .bashrc:
+     gedit ~/.bashrc
 
 
 ![alt text](https://github.com/fabiomattheus/docker-development/blob/main/menu-docker-development.png)
