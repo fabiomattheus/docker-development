@@ -20,5 +20,14 @@
  ### Acesse o arquivo .bashrc:
      gedit ~/.bashrc
 
-
+ ### 5 - Cole na última linha do arquivo .bashrc as instruções descritas abaixo e modifique o seu usuário e o caminho do projeto confome mostrado no item 3: 
+     function call { 
+        cd /home/fabio/projects/docker-development && bash call $* 
+        cd -
+     }
+     export HOST_UID=$(id -u)
+ 
+ ### Nota: export HOST_UID=$(id -u) servirá para que o id do usuário seja encontrado no momento da construção do conteiner do projeto Fluxo de Caixa    
+    
+ ### 6 - Execute o comando  call e se tudo estiver certo, deverá ser mostrado um menu confome imagem abaixo:   
 ![alt text](https://github.com/fabiomattheus/docker-development/blob/main/menu-docker-development.png)
