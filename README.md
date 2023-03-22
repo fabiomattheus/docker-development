@@ -34,4 +34,27 @@
      
 ![alt text](https://github.com/fabiomattheus/docker-development/blob/main/menu-docker-development.png)
 
-### 7 - :
+### 7 - Execute o camando abaixo para clonar o projeto de Fluxo de Caixa:
+    call clone
+
+### 8 - Execute o comando abaixo para construção dos containers docker e configurão do Projeto Fluxo de Caixa Laravel DDD
+    call init
+ 
+### 9 - Execute o comando docker ps para visualizar os containers:
+    docker ps 
+    
+### Nota: Se tudo correu bem até aqui,  os contaners docker estão up e agora poderamos utilizar os comando laravel para manipulação do projeto Fluxo de Caixa Laravel DDD.
+
+### 10 - Execute o comando abaixo para limpar o banco de dados:
+    call artisan migrate:fresh
+
+### 11 - Execute o comando abaixo para executar todos os testes:
+    call artisan test
+
+
+    
+    
+ 
+
+
+    
