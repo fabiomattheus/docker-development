@@ -8,10 +8,10 @@
  ### 1 - Faça um clone do projeto através do repositório abaixo:
      git clone https://github.com/fabiomattheus/docker-development.git
  
- ### 2 - Acesse o diretório do projeto:
+ ### 2 - Acesse a raiz do diretório do projeto:
      cd docker-development
  
- ### 3 - Execute o comando abaixo:
+ ### 3 - Execute o comando abaixo para visualizar o caminho do projeto:
      pwd
  
  ### 4 - Copie a saída do comando pwd mostarado na tela:
@@ -27,7 +27,7 @@
      }
      export HOST_UID=$(id -u)
  
- ### Nota: export HOST_UID=$(id -u) servirá para que o id do usuário seja encontrado no momento da construção do conteiner do projeto Fluxo de Caixa    
+ ### Nota: export HOST_UID=$(id -u) servirá para que o id do usuário seja encontrado no momento da construção do container do projeto Fluxo de Caixa    
     
  ### 6 - Execute o comando call e se tudo estiver certo, deverá ser mostrado um menu confome imagem abaixo:   
      call
@@ -43,7 +43,7 @@
 ### 9 - Execute o comando docker ps para visualizar os containers:
     docker ps 
     
-### Nota: Se tudo correu bem até aqui,  os contaners docker estão up e agora poderamos utilizar os comando laravel para manipulação do projeto Fluxo de Caixa Laravel DDD.
+### Nota: Se tudo correu bem até aqui,  os containers docker estão up e agora poderemos utilizar os comandos do laravel para manipulação do projeto Fluxo de Caixa Laravel DDD.
 
 ### 10 - Execute o comando abaixo para limpar o banco de dados:
     call artisan migrate:fresh
@@ -51,12 +51,12 @@
 ### 11 - Execute o comando abaixo para executar todos os testes:
     call artisan test
 
-### Nota: Através do comando call artisan você poderá complementá-lo com qualquer flag igualmente quando utilizado localmente php artisan:
+### Nota: Através do comando call artisan e/ou call composer você poderá complementá-lo com qualquer flag igualmente quando utilizado localmente php artisan:
 
 ### 12 - Execute o comando abaixo para certificar que os namespaces dos arquivos estão fidedignos:
     call composer dump-autoload
 
-### Nota: Para executar os comando call não é necessário entrar dentro do container com a flag exec, pois dentro do script do arquivo call, disponivel na raiz do projeto, os comandos doker são executados com  a flag run --rm, ou seja, o comando levatará o container caso não esteja up, e assim que usá-lo, o removerá.  
+### Nota: Para executar os comando call não é necessário entrar dentro do container com a flag exec, pois dentro do script do arquivo call, disponível na raiz do projeto, os comandos docker são executados com a flag run --rm, ou seja, o comando levatará o container caso não esteja up, e assim que usá-lo, o removerá.  
 
 
 
