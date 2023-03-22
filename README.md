@@ -43,7 +43,7 @@
 ### 9 - Execute o comando docker ps para visualizar os containers:
     docker ps 
     
-### Nota: Se tudo correu bem até aqui,  os containers docker estão up e agora poderemos utilizar os comandos do laravel para manipulação do projeto Fluxo de Caixa Laravel DDD.
+### Nota: Se tudo correu bem até aqui,  os containers docker estão up e agora podemos utilizar os comandos do laravel para manipulação do projeto Fluxo de Caixa Laravel DDD.
 
 ### 10 - Execute o comando abaixo para limpar o banco de dados:
     call artisan migrate:fresh
