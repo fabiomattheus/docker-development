@@ -1,0 +1,11 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "intelephense.diagnostics.typeErrors": false,
+    "cSpell.words": [
+        "Autoloaded",
+        "cnpj",
+        "encrypter",
+        "getfillable",
+        "Laravel"
+    ]
+}

@@ -1,0 +1,93 @@
+version: '3.8'
+
+# Services
+services:
+
+  # Nginx Service
+  nginx:
+    build: ./.docker/nginx
+    ports:
+      - 80:80
+     # - 443:443
+    networks:
+      default:
+        aliases:
+          - frontend.mttechne.test
+    volumes:
+      - ./src/backend:/var/www/backend
+      - ./.docker/nginx/conf.d:/etc/nginx/conf.d
+      - phpmyadmindata:/var/www/phpmyadmin
+      #- ./.docker/nginx/certs:/etc/nginx/certs
+    depends_on:
+      - backend
+      - phpmyadmin
+
+  # Backend Service
+  backend:
+    build:
+      context: ./src/backend
+      target: backend
+      args:
+        HOST_UID: $HOST_UID
+    working_dir: /var/www/backend
+    volumes:
+      - ./src/backend:/var/www/backend
+      - ./.docker/backend/init:/opt/files/init
+   #   - ./.docker/nginx/certs:/usr/local/share/ca-certificates
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # MySQL Service
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_DATABASE: mttechne
+    ports:
+      - 33061:3306  
+    volumes:
+      - ./.docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - mysqldata:/var/lib/mysql
+    healthcheck:
+      test: mysqladmin ping -h 127.0.0.1 -u root --password=$$MYSQL_ROOT_PASSWORD
+      interval: 5s
+      retries: 10
+
+  # PhpMyAdmin Service
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.2.0-fpm-alpine
+    environment:
+      PMA_HOST: mysql
+    volumes:
+      - phpmyadmindata:/var/www/html
+    depends_on:
+      - mysql
+     
+  # Redis Service
+  redis:
+    image: redis:6-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redisdata:/data
+    healthcheck:
+      test: [ "CMD", "redis-cli", "--raw", "incr", "ping" ]  
+
+  # Scheduler Service
+  scheduler:
+    image: mcuadros/ofelia:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./.docker/scheduler/config.ini:/etc/ofelia/config.ini
+    depends_on:
+      - backend    
+
+# Volumes
+volumes:
+
+  mysqldata:
+  phpmyadmindata:
+  redisdata:

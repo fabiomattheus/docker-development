@@ -1,0 +1,5 @@
+.env
+src/*
+!src/backend
+src/backend/*
+!src/backend/.docker
