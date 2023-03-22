@@ -29,5 +29,9 @@
  
  ### Nota: export HOST_UID=$(id -u) servirá para que o id do usuário seja encontrado no momento da construção do conteiner do projeto Fluxo de Caixa    
     
- ### 6 - Execute o comando  call e se tudo estiver certo, deverá ser mostrado um menu confome imagem abaixo:   
+ ### 6 - Execute o comando call e se tudo estiver certo, deverá ser mostrado um menu confome imagem abaixo:   
+     call
+     
 ![alt text](https://github.com/fabiomattheus/docker-development/blob/main/menu-docker-development.png)
+
+### 7 - :
