@@ -2,7 +2,7 @@
    Ambiente em desenvolvimento docker implementado para facilitar e dar rapidez na configuração do ambiente de desenvolvimento de software nas mais diversas linguagens. 
    
 ## Conteúdo do Projeto:  
-   A versão atual do projeto comtempla os serviços Mysql, PHPMyAdmim, Redis, Ofelia Schedule e um projeto de Fluxo de Caixa desenvolvido em Laravel/PHP que poderá ser clonado do GitHub e manipulado por comando bash através de um terminal.
+   A versão atual do projeto comtempla os serviços Mysql, PHPMyAdmim, Redis, Ofelia Schedule e um projeto de Fluxo de Caixa desenvolvido em Laravel/PHP que poderá ser clonado do GitHub e manipulado por comandos bash através de um terminal.
    
  ## Como utilizar:
  ### 1 - Faça um clone do projeto através do repositório abaixo:
