@@ -37,7 +37,7 @@
 ### 7 - Execute o camando abaixo para clonar o projeto de Fluxo de Caixa:
     call clone
 
-### 8 - Execute o comando abaixo para construção dos containers docker e configurão do Projeto Fluxo de Caixa Laravel DDD
+### 8 - Execute o comando abaixo para construção dos containers docker e configuração do Projeto Fluxo de Caixa Laravel DDD
     call init
  
 ### 9 - Execute o comando docker ps para visualizar os containers:
