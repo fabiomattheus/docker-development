@@ -51,6 +51,14 @@
 ### 11 - Execute o comando abaixo para executar todos os testes:
     call artisan test
 
+### Nota: Através do comando call artisan você poderá complementá-lo com qualquer flag igualmente quando utilizado localmente php artisan:
+
+### 12 - Execute o comando abaixo para certificar que os namespaces dos arquivos estão fidedignos:
+    call composer dump-autoload
+
+### Nota: Para executar os comando call não é necessário entrar dentro do container com a flag exec, pois dentro do script do arquivo call, disponivel na raiz do projeto, os comandos doker são executados com  a flag run --rm, ou seja, o comando levatará o container caso não esteja up, e assim que usá-lo, o removerá.  
+
+
 
     
     
