@@ -86,13 +86,22 @@ yarn () {
 
 # Clone or update the repositories
 clone () {
+    
     repos=(cash-flow-controller-api-ddd-laravel)
+    
+    if [ -d src/ ];
+    then
+    mkdir src
+    fi
     
     if [ -d src/backend/ ];
     then
+    
      read -p "The clone cannot continue bacause the backend directory exists. Are you understand? [y]: " -r
       if [[ ! $REPLY =~ ^[Yy]$ ]]; then exit; fi
+    
     else
+    
     cd src \
     && mkdir tmp \
     && cd tmp
@@ -101,6 +110,7 @@ clone () {
     do
         git clone "https://github.com/fabiomattheus/${repo}.git" "$repo" || (cd "$repo" ; git pull ; cd ..) || true
     done
+    
     cd .. \
     &&  mkdir backend \
     && mv -n tmp/${repo}/.* backend  \
