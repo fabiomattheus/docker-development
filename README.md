@@ -22,7 +22,7 @@
 
  ### 5 - Cole na última linha do arquivo .bashrc as instruções descritas abaixo e modifique o seu usuário e o caminho do projeto confome mostrado no item 3: 
      function call { 
-        cd /home/fabio/projects/docker-development && bash call $* 
+        cd /home/seu_usuario/caminho_do projeto/docker-development && bash call $* 
         cd -
      }
      export HOST_UID=$(id -u)
