@@ -89,11 +89,6 @@ clone () {
     
     repos=(cash-flow-controller-api-ddd-laravel)
     
-    if [ -d src/ ];
-    then
-    mkdir src
-    fi
-    
     if [ -d src/backend/ ];
     then
     
